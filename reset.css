@@ -135,20 +135,20 @@ address {
  * Remove the gray background on active links in IE 10.
  */
 
-a {
+/* a {
     background-color: transparent;
-    text-decoration: none;
+    /* text-decoration: none;
     color: inherit;
-}
+} */
 
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 
-abbr[title] {
-    text-decoration: underline dotted; /* 2 */
-}
+/* abbr[title] {
+    text-decoration: underline dotted;
+}*/
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.

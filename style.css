@@ -38,11 +38,11 @@ header ul li {
 }
 
 .login {
-    width: 100px;
+    width: 80px;
     height: 2rem;
     text-align: center;
     background-color: #e11e1e;
-    border-radius: 2%;
+    border-radius: 8px;
     color: #fff;
 }
 
@@ -87,7 +87,7 @@ form {
     height: 3rem;
     font-size: 16px;
     border: 0.5px solid #b5b2b2;
-    border-radius: 3%;
+    border-radius: 8px;
 }
 
 .subscribe button {
@@ -99,17 +99,19 @@ form {
     color: #fff;
     border: none;
     cursor: pointer;
-    border-radius: 3%;
+    border-radius: 8px;
 }
 
 main {
     background: #000;
     padding-top: 5rem;
+    height: auto;
 }
 
 .section {
     display: flex;
     width: 80vw;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -119,30 +121,54 @@ main {
     width: 10vw;
     text-align: center;
 }
+
 .plan {
     width: 100vw;
     text-align: center;
     color: #fff;
-    height: 15vh;
+    height: 10vh;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-        90deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(8, 0, 112, 0.8393951330532212) 35%
-    );
+    transition: 0.5s;
 }
 
 .explain {
-    text-align: left;
-    width: 40vw;
+    margin-top: 0.5rem;
+    position: relative;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(8, 3, 79, 0.839) 35%);
+    width: 100%;
     margin-left: 2rem;
+    height: 12vh;
+    border-radius: 10px;
+    text-align: left;
+    padding: 1.5rem 1rem 1rem 2.5rem;
+    transition: 0.5s;
+}
+
+.plan:hover {
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+.plan:hover .explain {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(14, 5, 143, 0.839) 35%);
+}
+
+.explain-title {
+    width: 70%;
+    font-size: 1.5rem;
+    line-height: 1rem;
+}
+
+.explain-text {
 }
 
 .detail {
+    position: absolute;
+    right: 1rem;
+    top: 1.7rem;
     height: 5vh;
     background: #656363;
     width: 14vw;
@@ -150,6 +176,10 @@ main {
     border-radius: 10px;
     line-height: 5vh;
     margin-right: 2rem;
+}
+
+.detail a {
+    text-decoration: none;
 }
 
 .part {
@@ -179,8 +209,8 @@ main {
 }
 
 .reasons-title {
-    font-size: 1.4rem;
-    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
     line-height: 1.5;
 }
 
@@ -194,11 +224,146 @@ main {
     bottom: 1rem;
     right: 1rem;
 }
+.part {
+    margin-bottom: 2rem;
+}
+
+.accordion-section {
+    width: 80vw;
+    height: auto;
+    margin: 0 auto;
+}
+
+.accordion {
+    width: 80%;
+    height: auto;
+    background: #434242;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.accordion:hover {
+    background: #5a5757;
+}
 
 .accordion-menu {
-    margin-top: 2rem;
-    width: 100vw;
-    height: 10vh;
+    height: 5.5rem;
+    position: relative;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    /* マウスホバーで色変える */
+}
+.accordion-text {
+    height: 0;
     background: #434242;
-    line-height: 10vh;
+    border-top: solid 1px #000;
+    line-height: 2.5rem;
+    overflow: auto;
+    margin-bottom: 0.5rem;
+    transition: height 0.5s ease;
+}
+
+.bar1 {
+    height: 2rem;
+    border: 1px solid #fff;
+    position: absolute;
+    right: 3rem;
+    rotate: 0deg;
+}
+.bar2 {
+    height: 2rem;
+    border: 1px solid #fff;
+    position: absolute;
+    right: 3rem;
+    rotate: 90deg;
+}
+.accordion.active .bar1 {
+    height: 2rem;
+    border: 1px solid #fff;
+    position: absolute;
+    right: 3rem;
+    rotate: 45deg;
+}
+.accordion.active .bar2 {
+    height: 2rem;
+    border: 1px solid #fff;
+    position: absolute;
+    right: 3rem;
+    rotate: -45deg;
+}
+
+.accordion.active .accordion-text {
+    padding: 1rem;
+    height: auto;
+}
+
+.membership {
+    width: 80vw;
+    height: auto;
+    margin: 4.5rem auto auto auto;
+}
+
+.membership p {
+    margin-bottom: 1.5rem;
+}
+
+.membership input[type="email"] {
+    padding-left: 10px;
+    width: 60%;
+    height: 3.5rem;
+    font-size: 16px;
+    border: 0.5px solid #b5b2b2;
+    border-radius: 8px;
+}
+
+.membership button {
+    width: 25%;
+    margin-left: 2rem;
+    text-align: center;
+    font-size: 25px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.end-section {
+    width: 80vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.question {
+    margin-bottom: 2rem;
+    color: #b5b2b2;
+}
+
+.other {
+    display: flex;
+}
+
+.box {
+    width: 25%;
+    height: auto;
+    line-height: 2.5rem;
+}
+
+.box p {
+    color: #b5b2b2;
+    font-size: 1rem;
+}
+
+.box a {
+    text-decoration-color: #b5b2b2;
+}
+
+.footer-language {
+    margin: 2rem auto 2rem auto;
+}
+.footer-language p {
+    color: #b5b2b2;
+    margin: 2rem auto 6rem auto;
 }
